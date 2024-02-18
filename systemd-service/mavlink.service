@@ -1,0 +1,16 @@
+[Unit]
+Description=Start Mavlink Proxy from Serial to UDP Client. the GCS is the UDP Server
+Requires=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/home/pi/piZero-4G-FPV/bin/mavp2p serial:/dev/ttyS0:115200 udpc:192.168.195.26:14550
+Restart=always
+RestartSec=3
+StartLimitBurst=999
+
+[Install]
+WantedBy=multi-user.target
+
+
