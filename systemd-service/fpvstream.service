@@ -1,0 +1,13 @@
+[Unit]
+Description=Start FPV Camera Stream to UDP Server at GCS
+Requires=network.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/home/pi/piZero-4G-FPV/start-camera.sh
+
+[Install]
+WantedBy=multi-user.target
+
+

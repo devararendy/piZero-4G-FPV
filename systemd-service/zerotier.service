@@ -1,0 +1,13 @@
+[Unit]
+Description=Start Zerotier P2P Virtual Network
+Requires=network.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/home/pi/piZero-4G-FPV/start.sh
+
+[Install]
+WantedBy=multi-user.target
+
+
