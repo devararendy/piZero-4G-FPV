@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "disable if exist"
+sudo systemctl disable zerotier.service
+sudo systemctl disable fpvstream.service
+
 echo "installing Services"
 
 sudo cp ./zerotier.service  /lib/systemd/system/zerotier.service
